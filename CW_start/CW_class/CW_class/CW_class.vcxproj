@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{AAF00DCE-24A7-4B9E-B3C5-D9B6962E91A9}</ProjectGuid>
+    <ProjectGuid>{9F361F76-11ED-41E2-8F77-B2201038F613}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CW_start</RootNamespace>
+    <RootNamespace>CW_class</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -146,11 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="correlation.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="correlation.h" />
+    <ClInclude Include="corr_alg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
