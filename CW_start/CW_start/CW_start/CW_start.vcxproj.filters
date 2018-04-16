@@ -21,9 +21,15 @@
     <ClCompile Include="correlation.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="control.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="correlation.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="control.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
