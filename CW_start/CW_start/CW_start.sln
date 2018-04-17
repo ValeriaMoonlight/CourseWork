@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CW_start", "CW_start\CW_start.vcxproj", "{AAF00DCE-24A7-4B9E-B3C5-D9B6962E91A9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FD521E50-3824-43B9-9F37-C09CD8EACF08} = {FD521E50-3824-43B9-9F37-C09CD8EACF08}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NTL", "C:\Users\samso\Downloads\WinNTL-11_0_0\src\NTL.vcxproj", "{FD521E50-3824-43B9-9F37-C09CD8EACF08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +26,14 @@ Global
 		{AAF00DCE-24A7-4B9E-B3C5-D9B6962E91A9}.Release|x64.Build.0 = Release|x64
 		{AAF00DCE-24A7-4B9E-B3C5-D9B6962E91A9}.Release|x86.ActiveCfg = Release|Win32
 		{AAF00DCE-24A7-4B9E-B3C5-D9B6962E91A9}.Release|x86.Build.0 = Release|Win32
+		{FD521E50-3824-43B9-9F37-C09CD8EACF08}.Debug|x64.ActiveCfg = Debug|x64
+		{FD521E50-3824-43B9-9F37-C09CD8EACF08}.Debug|x64.Build.0 = Debug|x64
+		{FD521E50-3824-43B9-9F37-C09CD8EACF08}.Debug|x86.ActiveCfg = Debug|Win32
+		{FD521E50-3824-43B9-9F37-C09CD8EACF08}.Debug|x86.Build.0 = Debug|Win32
+		{FD521E50-3824-43B9-9F37-C09CD8EACF08}.Release|x64.ActiveCfg = Release|x64
+		{FD521E50-3824-43B9-9F37-C09CD8EACF08}.Release|x64.Build.0 = Release|x64
+		{FD521E50-3824-43B9-9F37-C09CD8EACF08}.Release|x86.ActiveCfg = Release|Win32
+		{FD521E50-3824-43B9-9F37-C09CD8EACF08}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

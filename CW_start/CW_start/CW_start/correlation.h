@@ -1,22 +1,24 @@
 #ifndef  _CORRELATION_H_
 #define  _CORRELATION_H_
+#include <NTL/ZZ.h>
+using namespace NTL;
 
-class Correlation
+class Logarithm
 {
 private:
-	long long prime;
-	long long high_bound;
-	long long c_number;
-	long long a_base;
-	long long b_value;
-	long long u_degree;
-	long long v_degree;
-	long long logarithm;
+	//ZZ 
+	ZZ prime;
+	//ZZ 
+	ZZ a_base;
+	//ZZ 
+	ZZ b_value;
+	//ZZ 
+	ZZ log_value;
 public:
-	Correlation();
+	Logarithm();
 	void CorrAlgorithm();
 	void Input();
-	~Correlation() {};
+	~Logarithm() {};
 	void Output() const;
 };
 

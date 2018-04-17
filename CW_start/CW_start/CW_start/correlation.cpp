@@ -4,17 +4,18 @@
 #include <math.h>
 #include <time.h>
 using namespace std;
+using namespace NTL;
 
-Correlation::Correlation()
+Logarithm::Logarithm()
 {
 	Input();
 }
 
-void Correlation::Input()
+void Logarithm::Input()
 {
 	cout << "Input prime" << endl;
 	cin >> prime;
-	if (FermaAlg(prime))
+	if (ProbPrime(prime))
 	{
 		cout << "Input base" << endl;
 		cin >> a_base;
@@ -36,30 +37,33 @@ void Correlation::Input()
 	}
 }
 
-void Correlation::Output() const
+void Logarithm::Output() const
 {
-	cout << "Logarithm: " << logarithm << endl;
+	cout << "Logarithm: " << log_value << endl;
 }
 
-void Correlation::CorrAlgorithm()
+void Logarithm::CorrAlgorithm()
 {
+	ZZ high_bound, c_number, u_degree, v_degree;
 		//1 step
-		high_bound = trunc(sqrt(prime)) + 1;
+		high_bound = SqrRoot(prime) + 1;
 
 		// 2 step
-		c_number = long long(pow(a_base, high_bound)) % prime;
+		c_number = PowerMod(a_base, high_bound, prime);
 
 		// 3 and 4 step
-		long long *table1 = new long long[high_bound - 1];
-		long long *table2 = new long long[high_bound];
+		long hb;
+		conv(hb, high_bound);
+		ZZ *table1 = new ZZ [hb - 1];
+		ZZ *table2 = new ZZ [hb];
 		for (int u = 0; u < high_bound; ++u)
 		{
-			table1[u] = static_cast<long long>(pow(c_number, u + 1)) % prime;
+			table1[u] = PowerMod(c_number, u + 1, prime);
 
 		}
 		for (int v = 0; v <= high_bound; ++v)
 		{
-			table2[v] = long long(b_value*pow(a_base, v)) % prime;
+			table2[v] = b_value*PowerMod(a_base, v, prime);
 		}
 		// 5 step
 		bool flag = true;
@@ -75,5 +79,5 @@ void Correlation::CorrAlgorithm()
 				}
 		}
 		// 6 step
-		logarithm = static_cast<long long>((high_bound *u_degree - v_degree)) % (prime - 1);
+		log_value = SubMod(MulMod(high_bound,u_degree, prime-1),v_degree,prime-1);
 }

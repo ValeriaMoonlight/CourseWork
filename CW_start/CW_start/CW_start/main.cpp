@@ -1,3 +1,4 @@
+
 #include "correlation.h"
 #include <iostream>
 #include <math.h>
@@ -5,12 +6,11 @@
 using namespace std;
 
 
-
 int main()
 {
-	Correlation Alg;
-	Alg.CorrAlgorithm();
-	Alg.Output();
+	Logarithm discr_log;
+	discr_log.CorrAlgorithm();
+	discr_log.Output();
 
 	system("pause");
 	return 0;
